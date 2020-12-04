@@ -173,11 +173,11 @@ public class BatStage extends JPanel implements ActionListener{
                         bat.x+=10;
                         bat.count++;
                     }
-                    if(bat.count>3){
+                    if(bat.count>2){
                         bat.count=0;
                     }
                     else if(a == KeyEvent.VK_SPACE){
-                        bat.count=5;
+                        bat.count=3;
 			boomarang.add(new Boomarang(bat.x+100,bat.y+75));
                     }
                 }
@@ -221,8 +221,7 @@ public class BatStage extends JPanel implements ActionListener{
             //===Boomarang
             for(int i=0;i<boomarang.size();i++){
 		Boomarang bo = boomarang.get(i);
-                //g.drawImage(atk.getImage(),bat.x,bat.y,150,200,this);
-                g.drawImage(bo.bmr[bo.count%4].getImage(),bo.x,bo.y,50,50,null);
+                g.drawImage(bo.bmr[bo.count%3].getImage(),bo.x,bo.y,50,50,null);
 		bo.move();
                 bo.count++;
 		if(bo.x>1200){
