@@ -3,7 +3,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
 public class Batman {
-    public ImageIcon[] bm = new ImageIcon[3];
+    public ImageIcon[] bm = new ImageIcon[4];
     public int x;
     public int y;
     public int count=0;
